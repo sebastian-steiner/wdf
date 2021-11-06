@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wdf/logic/date.dart';
 import 'package:wdf/logic/statistics.dart';
-import 'package:wdf/widgets/answer_button.dart';
+import 'package:wdf/widgets/answer_widget.dart';
 
 import 'p_century_end.dart';
 
@@ -59,7 +59,8 @@ class _PCenturyState extends State<PCentury> {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Column(
+          Expanded(
+              child: Column(
             children: <Widget>[
               Text(
                 "Century:",
@@ -67,38 +68,14 @@ class _PCenturyState extends State<PCentury> {
               ),
               Text(
                 remainingCodes.last.toString(),
-                style: Theme.of(context).textTheme.headline1.copyWith(color: color),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline1
+                    .copyWith(color: color),
               ),
-              AnswerButton(
-                answer: answer,
-                val: 0,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 1,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 2,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 3,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 4,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 5,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 6,
-              ),
+              AnswerWidget(answer: answer)
             ],
-          ),
+          )),
         ],
       ),
     );

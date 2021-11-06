@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wdf/logic/date.dart';
 import 'package:wdf/logic/statistics.dart';
-import 'package:wdf/widgets/answer_button.dart';
+import 'package:wdf/widgets/answer_widget.dart';
 
 import 'p_year_end.dart';
 
@@ -10,7 +10,12 @@ class PYear extends StatefulWidget {
   final int min;
   final int max;
 
-  PYear({Key key, @required this.repetitions, @required this.min, @required this.max}) : super(key: key);
+  PYear(
+      {Key key,
+      @required this.repetitions,
+      @required this.min,
+      @required this.max})
+      : super(key: key);
 
   @override
   _PYearState createState() => _PYearState();
@@ -54,7 +59,8 @@ class _PYearState extends State<PYear> {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Column(
+          Expanded(
+              child: Column(
             children: <Widget>[
               Text(
                 "Year:",
@@ -62,38 +68,14 @@ class _PYearState extends State<PYear> {
               ),
               Text(
                 remainingCodes.last.toString(),
-                style: Theme.of(context).textTheme.headline1.copyWith(color: color),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline1
+                    .copyWith(color: color),
               ),
-              AnswerButton(
-                answer: answer,
-                val: 0,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 1,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 2,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 3,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 4,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 5,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 6,
-              ),
+              AnswerWidget(answer: answer)
             ],
-          ),
+          )),
         ],
       ),
     );
@@ -119,8 +101,8 @@ class _PYearState extends State<PYear> {
         color = Colors.green;
         remainingCodes.removeLast();
         if (remainingCodes.isEmpty) {
-          Navigator.of(context)
-              .pushReplacement(MaterialPageRoute(builder: (_) => PYearEnd(stats: stats)));
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (_) => PYearEnd(stats: stats)));
         }
       });
     } else {

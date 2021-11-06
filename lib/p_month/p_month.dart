@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wdf/logic/date.dart';
 import 'package:wdf/logic/statistics.dart';
-import 'package:wdf/widgets/answer_button.dart';
+import 'package:wdf/widgets/answer_widget.dart';
 
 import 'p_month_end.dart';
 
@@ -9,7 +9,8 @@ class PMonth extends StatefulWidget {
   final int repetitions;
   final bool byMonthNames;
 
-  PMonth({Key key, @required this.repetitions, @required this.byMonthNames}) : super(key: key);
+  PMonth({Key key, @required this.repetitions, @required this.byMonthNames})
+      : super(key: key);
 
   @override
   _PMonthState createState() => _PMonthState();
@@ -53,46 +54,25 @@ class _PMonthState extends State<PMonth> {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Column(
+          Expanded(
+              child: Column(
             children: <Widget>[
               Text(
                 "Month:",
                 style: Theme.of(context).textTheme.headline2,
               ),
               Text(
-                widget.byMonthNames ? Date.monthNames[remainingCodes.last] : (remainingCodes.last + 1).toString(),
-                style: Theme.of(context).textTheme.headline1.copyWith(color: color),
+                widget.byMonthNames
+                    ? Date.monthNames[remainingCodes.last]
+                    : (remainingCodes.last + 1).toString(),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline1
+                    .copyWith(color: color),
               ),
-              AnswerButton(
-                answer: answer,
-                val: 0,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 1,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 2,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 3,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 4,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 5,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 6,
-              ),
+              AnswerWidget(answer: answer)
             ],
-          ),
+          )),
         ],
       ),
     );
@@ -117,8 +97,8 @@ class _PMonthState extends State<PMonth> {
         color = Colors.green;
         remainingCodes.removeLast();
         if (remainingCodes.isEmpty) {
-          Navigator.of(context)
-              .pushReplacement(MaterialPageRoute(builder: (_) => PMonthEnd(stats: stats)));
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (_) => PMonthEnd(stats: stats)));
         }
       });
     } else {

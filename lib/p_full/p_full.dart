@@ -4,7 +4,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:wdf/logic/date.dart';
 import 'package:wdf/logic/statistics.dart';
-import 'package:wdf/widgets/answer_button.dart';
+import 'package:wdf/widgets/answer_widget.dart';
 
 import 'p_full_end.dart';
 
@@ -82,50 +82,23 @@ class _PFullState extends State<PFull> {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Column(
+          Expanded(
+              child: Column(
             children: <Widget>[
               Text(
                 "Date:",
                 style: Theme.of(context).textTheme.headline2,
               ),
-              Expanded(
-                  child: AutoSizeText(
+              AutoSizeText(
                 remainingCodes.last.formatDate(widget.byMonthNames),
                 style: TextStyle(fontWeight: FontWeight.bold),
                 maxFontSize: 60,
                 minFontSize: 50,
                 maxLines: 2,
-              )),
-              AnswerButton(
-                answer: answer,
-                val: 0,
               ),
-              AnswerButton(
-                answer: answer,
-                val: 1,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 2,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 3,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 4,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 5,
-              ),
-              AnswerButton(
-                answer: answer,
-                val: 6,
-              ),
+              AnswerWidget(answer: answer)
             ],
-          ),
+          )),
         ],
       ),
     );

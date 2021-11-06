@@ -11,8 +11,7 @@ class AnswerButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: MediaQuery.of(context).size.height / 14,
-        width: MediaQuery.of(context).size.width / 3,
+        height: MediaQuery.of(context).size.height / 10,
         child: RaisedButton(
           onPressed: () => answer(val),
           child: Text(
