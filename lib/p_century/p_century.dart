@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wdf/logic/date.dart';
-import 'package:wdf/logic/stat_saver.dart';
 import 'package:wdf/logic/statistics.dart';
 import 'package:wdf/widgets/answer_button.dart';
 
@@ -114,7 +113,6 @@ class _PCenturyState extends State<PCentury> {
           "min": widget.min.toString(),
           "max": widget.max.toString()
         });
-        await new StatSaver().saveStats('pcentury', stats);
       }
 
       setState(() {

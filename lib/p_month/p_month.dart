@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wdf/logic/date.dart';
-import 'package:wdf/logic/stat_saver.dart';
 import 'package:wdf/logic/statistics.dart';
 import 'package:wdf/widgets/answer_button.dart';
 
@@ -107,7 +106,6 @@ class _PMonthState extends State<PMonth> {
           "repetitions": widget.repetitions.toString(),
           "byMonthNames": widget.byMonthNames.toString()
         });
-        await new StatSaver().saveStats('pmonth', stats);
       }
 
       setState(() {

@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:wdf/logic/date.dart';
-import 'package:wdf/logic/stat_saver.dart';
 import 'package:wdf/logic/statistics.dart';
 import 'package:wdf/widgets/answer_button.dart';
 
@@ -144,7 +143,6 @@ class _PFullState extends State<PFull> {
           "maxCentury": widget.maxCentury.toString(),
           "byMonthNames": widget.byMonthNames.toString()
         });
-        await new StatSaver().saveStats('pfull', stats);
       }
 
       setState(() {
