@@ -91,7 +91,7 @@ class _PFullState extends State<PFull> {
               ),
               AutoSizeText(
                 remainingCodes.last.formatDate(widget.byMonthNames),
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold, color: color),
                 maxFontSize: 60,
                 minFontSize: 50,
                 maxLines: 2,

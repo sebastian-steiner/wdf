@@ -74,7 +74,7 @@ class _PDayMonthState extends State<PDayMonth> {
               ),
               AutoSizeText(
                 remainingCodes.last.formatDayMonth(widget.byMonthNames),
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold, color: color),
                 minFontSize: 50,
                 maxFontSize: 60,
                 maxLines: 2,
