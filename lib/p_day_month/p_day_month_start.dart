@@ -16,7 +16,7 @@ class _PDayMonthStartState extends State<PDayMonthStart> {
   @override
   void initState() {
     super.initState();
-    count = 25;
+    count = 30;
     byMonthNames = false;
   }
 
@@ -44,7 +44,7 @@ class _PDayMonthStartState extends State<PDayMonthStart> {
               NumberPickerRow(
                 curr: count,
                 min: 1,
-                max: 50,
+                max: 250,
                 name: "Count",
                 update: (val) => setState(() {
                   count = val;
