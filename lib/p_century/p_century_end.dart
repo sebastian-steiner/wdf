@@ -12,7 +12,7 @@ class PCenturyEnd extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Practice centuries"),
+        title: Text("Practice Centuries"),
       ),
       body: Container(
         child: Row(

@@ -12,7 +12,7 @@ class PYearEnd extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Practice years"),
+        title: Text("Practice Years"),
       ),
       body: Container(
         child: Row(

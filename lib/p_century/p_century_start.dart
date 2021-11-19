@@ -27,7 +27,7 @@ class _PCenturyStartState extends State<PCenturyStart> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Practice centuries",
+          "Practice Centuries",
           style: Theme.of(context)
               .textTheme
               .headline3

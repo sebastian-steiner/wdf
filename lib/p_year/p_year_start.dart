@@ -27,7 +27,7 @@ class _PYearStartState extends State<PYearStart> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Practice years",
+          "Practice Years",
           style: Theme.of(context)
               .textTheme
               .headline3

@@ -77,7 +77,7 @@ class _PFullState extends State<PFull> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Practice Full dates"),
+        title: Text("Practice Full Dates"),
       ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,

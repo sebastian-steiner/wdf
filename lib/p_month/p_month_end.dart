@@ -12,7 +12,7 @@ class PMonthEnd extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Practice months"),
+        title: Text("Practice Months"),
       ),
       body: Container(
         child: Row(

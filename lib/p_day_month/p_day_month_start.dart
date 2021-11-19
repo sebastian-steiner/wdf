@@ -25,7 +25,7 @@ class _PDayMonthStartState extends State<PDayMonthStart> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Practice day-months",
+          "Practice Day-Months",
           style: Theme.of(context)
               .textTheme
               .headline3

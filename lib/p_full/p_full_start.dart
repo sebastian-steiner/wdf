@@ -33,7 +33,7 @@ class _PFullStartState extends State<PFullStart> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Practice full date",
+          "Practice Full Dates",
           style: Theme.of(context)
               .textTheme
               .headline3

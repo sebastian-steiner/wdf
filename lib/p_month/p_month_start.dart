@@ -25,7 +25,7 @@ class _PMonthStartState extends State<PMonthStart> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Practice months",
+          "Practice Months",
           style: Theme.of(context)
               .textTheme
               .headline3
