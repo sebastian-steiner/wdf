@@ -12,12 +12,10 @@ class Homepage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          NamedNavigatorButton(
-            route: "/PMonth",
-            text: "Practice Months",
-          ),
+          NamedNavigatorButton(route: "/PMonth", text: "Practice Months",),
           NamedNavigatorButton(route: "/PYear", text: "Practice Years"),
           NamedNavigatorButton(route: "/PCentury", text: "Practice Centuries"),
+          NamedNavigatorButton(route: "/PYearFull", text: "Practice Full Years"),
           NamedNavigatorButton(route: "/PDayMonth", text: "Practice Day-Months"),
           NamedNavigatorButton(route: "/PFull", text: "Practice Full Dates"),
         ],

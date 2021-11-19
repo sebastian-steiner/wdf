@@ -5,6 +5,7 @@ import 'package:wdf/p_month/p_month_start.dart';
 import 'package:wdf/p_century/p_century_start.dart';
 import 'package:wdf/p_year/p_year_start.dart';
 import 'package:wdf/p_full/p_full_start.dart';
+import 'package:wdf/p_year_full/p_year_full_start.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,8 +23,9 @@ class MyApp extends StatelessWidget {
         '/PMonth': (context) => PMonthStart(),
         '/PYear': (context) => PYearStart(),
         '/PCentury': (context) => PCenturyStart(),
-        '/PFull': (context) => PFullStart(),
+        '/PYearFull': (context) => PYearFullStart(),
         '/PDayMonth': (context) => PDayMonthStart(),
+        '/PFull': (context) => PFullStart(),
       },
       theme: ThemeData(
           primarySwatch: Colors.blue,
